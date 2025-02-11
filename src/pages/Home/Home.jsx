@@ -10,7 +10,7 @@ const Home = ({ sidebar }) => {
 
   return (
     <>
-      <Sidebar sidebar = { sidebar } category={category} setCategory={setCategory} />
+      <Sidebar sidebar={ sidebar } category={category} setCategory={setCategory} />
       <div className={`container ${sidebar?"":'large-container'}`}>
         <Feed category={category}/>
 
