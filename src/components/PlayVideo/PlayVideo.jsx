@@ -155,6 +155,17 @@ const PlayVideo = ({ videoId }) => {
     const [apiData, setApiData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    // this three line is for description read more button
+    const [showFullDescription, setShowFullDescription] = useState(false);
+
+    const toggleDescription = () => {
+        setShowFullDescription(!showFullDescription);
+    };
+
+
+    // this is for
+    const [channelData,setChannelData] = useState(null);
+
 
     const fetchVideoData = async () => {
         try {
@@ -178,9 +189,22 @@ const PlayVideo = ({ videoId }) => {
         }
     };
 
+
+
+    const fetcOtherData = async ()=>{
+        // fetching channeldata
+        const channelData_url = `https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${apiData.snippet.channelId}&key=${API_KEY}`
+        await fetch(channelData_url).then(res=>res.json()).then(data=>setChannelData(data.items))
+    }
+
     useEffect(() => {
         fetchVideoData();
     }, [videoId]);
+
+    useEffect(()=>{
+        fetcOtherData();
+    },[apiData]);
+
 
     if (loading) {
         return <div>Loading...</div>;
@@ -189,7 +213,7 @@ const PlayVideo = ({ videoId }) => {
     if (error) {
         return <div>Error: {error}</div>;
     }
-
+    
     return (
         <div className='play-video'>
             <iframe
@@ -218,16 +242,32 @@ const PlayVideo = ({ videoId }) => {
         <div className='publisher'>
                 <img src={jack} alt="" />
                 <div>
-                    <p>GreatStack</p>
+                    <p>{apiData?apiData.snippet.channelTitle:""}</p>
                     <span>1M Subscriber</span>
                 </div>
                 <button>Subscribe</button>
             </div>
             <div className='vid-description'>
-                <p>Channel that make learning Easy</p>
-                <p>Subscriber GreatStack to watch more tutorials on web Development</p>
+                {/* <p>{apiData ? apiData.snippet.description.slice(0,250) : "Description Here"}</p> */}
+
+                 {/* this <p> tag and below is for description read more button */}
+
+                <p>
+                {apiData ? (
+                    showFullDescription 
+                        ? apiData.snippet.description 
+                        : apiData.snippet.description.slice(0, 250) + "..."
+                ) : "Description Here"}
+            </p>
+            
+            {/* Show "Read More" or "Show Less" based on the toggle state */}
+            {apiData && apiData.snippet.description.length > 250 && (
+                <button onClick={toggleDescription} className="read-more-btn">
+                    {showFullDescription ? "Show Less" : "Read More"}
+                </button>
+            )}
                 <hr />
-                <h4>130 Comments</h4>
+                <h4>{apiData?value_conveter(apiData.statistics.commentCount):102} Comments</h4>
                 <div className="comment">
                     <img src={user_profile} alt="" />
                     <div>

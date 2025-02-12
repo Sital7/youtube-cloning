@@ -124,3 +124,16 @@
     margin-right: 20px;
     color: #5a5a5a;
 }
+
+/* read more button of description */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.read-more-btn:hover {
+    text-decoration: underline;
+}
