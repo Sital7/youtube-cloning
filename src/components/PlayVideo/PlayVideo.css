@@ -1,4 +1,4 @@
-.play-video{
+/* .play-video{
     flex-basis: 69%;
 }
 .play-video iframe{
@@ -125,7 +125,6 @@
     color: #5a5a5a;
 }
 
-/* read more button of description */
 .read-more-btn {
     background: none;
     border: none;
@@ -136,4 +135,537 @@
 }
 .read-more-btn:hover {
     text-decoration: underline;
+}
+ */
+
+
+
+
+
+
+
+/* 
+
+ .play-video {
+    flex-basis: 69%;
+}
+
+.play-video iframe {
+    width: 100%;
+    height: 37vw;
+    border-radius: 30px;
+}
+
+.play-video h3 {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.play-video-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.play-video-info img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.play-video-info span {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.play-video hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.publisher div {
+    flex: 1;
+    line-height: 18px;
+}
+
+.publisher img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.publisher div p {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.publisher div span {
+    font-size: 13px;
+    color: #5a5a5a;
+}
+
+.publisher button {
+    background: rgb(232, 3, 3);
+    color: #fff;
+    padding: 8px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.publisher button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #f1f1f1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vid-description {
+    padding-left: 55px;
+    margin: 15px 0;
+}
+
+.vid-description p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5a5a5a;
+}
+
+.vid-description h4 {
+    font-size: 14px;
+    color: #5a5a5a;
+    margin-top: 15px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.comment img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.comment h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.comment h3 span {
+    font-size: 12px;
+    color: #5a5a5a;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.comment-action {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 5px;
+}
+
+.comment-action img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.comment-action span {
+    margin-right: 20px;
+    color: #5a5a5a;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+@media (forced-colors: active) {
+    .play-video {
+        background-color: Canvas;
+        color: CanvasText;
+    }
+
+    .play-video h3 {
+        color: CanvasText;
+    }
+
+    .play-video-info {
+        color: CanvasText;
+    }
+
+    .publisher {
+        color: CanvasText;
+    }
+
+    .publisher button {
+        background-color: ButtonFace;
+        color: ButtonText;
+    }
+
+    .vid-description {
+        color: CanvasText;
+    }
+
+    .read-more-btn {
+        color: LinkText;
+    }
+} */
+
+
+
+
+
+
+.play-video {
+    flex-basis: 69%;
+}
+
+.play-video iframe {
+    width: 100%;
+    height: 37vw;
+    border-radius: 30px;
+}
+
+.play-video h3 {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.play-video-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.play-video-info img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.play-video-info span {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.play-video hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.publisher div {
+    flex: 1;
+    line-height: 18px;
+}
+
+.publisher img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.publisher div p {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.publisher div span {
+    font-size: 13px;
+    color: #5a5a5a;
+}
+
+.publisher button {
+    background: rgb(232, 3, 3);
+    color: #fff;
+    padding: 8px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.publisher button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: #f1f1f1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vid-description {
+    padding-left: 55px;
+    margin: 15px 0;
+}
+
+.vid-description p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5a5a5a;
+}
+
+.vid-description h4 {
+    font-size: 14px;
+    color: #5a5a5a;
+    margin-top: 15px;
+}
+
+/* COMMENT AND REPLY SECTION STYLES */
+.comment-form {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.comment-form input {
+    width: 80%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comment-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #005bb5;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.comment img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.comment div {
+    flex: 1;
+}
+
+.comment h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.comment h3 span {
+    font-size: 12px;
+    color: #5a5a5a;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.comment-action {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.comment-action img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.comment-action span {
+    margin-right: 20px;
+    color: #5a5a5a;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.read-more-btn:hover {
+    text-decoration: underline;
+}
+
+/* REPLY BUTTONS AND INPUT STYLES */
+.reply{
+    padding: 8px 16px;
+    border: none;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 8%;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.reply:hover {
+    background-color: #005bb5;
+}
+
+/* Container for Post and Cancel buttons */
+.post-cancel-buttons {
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+    margin-top: 10px;
+}
+
+.post-cancel-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100px; /* Optional: Set a fixed width for both buttons */
+}
+
+.post-cancel-buttons .post-button {
+    background-color: #0073e6;
+    color: white;
+}
+
+.post-cancel-buttons .cancel-button {
+    background-color: #e4e4e4;
+    color: #333;
+}
+
+.post-cancel-buttons .post-button:hover {
+    background-color: #005bb5;
+}
+
+.post-cancel-buttons .cancel-button:hover {
+    background-color: #ccc;
+}
+
+
+
+.reply-input {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.reply-input input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+}
+
+.reply-input button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.reply-input button:hover {
+    background-color: #005bb5;
+}
+
+.replies .reply {
+    margin-bottom: 10px;
+}
+
+.replies .reply p {
+    font-size: 14px;
+    margin: 5px 0;
+    padding-left: 10px;
+}
+
+.replies .reply strong {
+    font-weight: bold;
+}
+
+/* To make the Reply button parallel to Like and Dislike buttons */
+.comment-action button {
+    padding: 0 8px;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* MEDIA QUERY FOR HIGH CONTRAST MODE */
+@media (forced-colors: active) {
+    .play-video {
+        background-color: Canvas;
+        color: CanvasText;
+    }
+
+    .play-video h3 {
+        color: CanvasText;
+    }
+
+    .play-video-info {
+        color: CanvasText;
+    }
+
+    .publisher {
+        color: CanvasText;
+    }
+
+    .publisher button {
+        background-color: ButtonFace;
+        color: ButtonText;
+    }
+
+    .vid-description {
+        color: CanvasText;
+    }
+
+    .read-more-btn {
+        color: LinkText;
+    }
 }
