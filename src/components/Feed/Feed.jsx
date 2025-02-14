@@ -162,57 +162,6 @@
 
 
 
-
-// // second good code
-// import React, { useEffect, useState } from 'react';
-// import "./Feed.css";
-// import { Link } from 'react-router-dom';
-// import { API_KEY, value_conveter } from '../../data';
-
-// const Feed = ({ category }) => {  
-
-//     const [data, setData] = useState([]);
-
-//     const fetchData = async () => {
-//         try {
-//             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
-            
-//             const response = await fetch(videoList_url);
-//             const result = await response.json();
-
-//             if (result.items) {
-//                 setData(result.items);
-//             } else {
-//                 setData([]);
-//             }
-//         } catch (error) {
-//             console.error("Error fetching data:", error);
-//         }
-//     };
-
-//     useEffect(() => {
-//         fetchData();
-//     }, [category]);
-
-//     return (
-//         <div className='feed'>
-//             {data.length === 0 ? <p>Loading...</p> : data.map((item, index) => (
-//                 <Link key={index} to={`/video/${item.id}`} className='card'>
-//                     <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
-//                     <h2>{item.snippet.title}</h2>
-//                     <h3>{item.snippet.channelTitle}</h3>
-//                     <p>{value_conveter(item.statistics.viewCount)} views &bull; 2 days ago </p>
-//                     {/* <p>{value_conveter(item.statistics.viewCount)} views &bull; {new Date(item.snippet.publishedAt).toLocaleDateString()}</p> */}
-//                 </Link>
-//             ))}
-//         </div>
-//     );
-// };
-
-// export default Feed;
-
-
-
 // // this is correct code 
 // import React from 'react';
 // import { useEffect,useState } from 'react';
