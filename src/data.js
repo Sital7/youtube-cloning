@@ -1,7 +1,7 @@
 export const API_KEY ='AIzaSyD1hVKWHsn3t4-2OhjAo8gMIdLpmvK8YLg'
+// 'AIzaSyB3RB5QUB09BSPNIsrsRMviF_wfoZAtFzU';
 // 'AIzaSyAyXrd0YtYdmEozNz09DQMp-mZ9tujTXiA' ;
 
-// 'AIzaSyB3RB5QUB09BSPNIsrsRMviF_wfoZAtFzU';
 
 export const value_conveter = (value)=>{
     if(value>=1000000){

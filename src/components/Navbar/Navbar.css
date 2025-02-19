@@ -171,7 +171,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 3%;
+    padding: 12px 2%;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: sticky;
