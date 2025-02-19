@@ -1,21 +1,3 @@
-// // src/pages/Settings.jsx
-// import React from 'react';
-// import "./Settings.css"
-
-// const Settings = () => {
-//   return (
-//     <div className="settings-container">
-//       <h2>Settings</h2>
-//       <p>Manage your account settings here.</p>
-//       {/* Add form elements or options for settings */}
-//     </div>
-//   );
-// };
-
-// export default Settings;
-
-
-
 import React, { useState } from 'react';
 import './Settings.css';
 
@@ -26,7 +8,7 @@ const Settings = () => {
 
   const handleSaveSettings = (e) => {
     e.preventDefault();
-    // Add your save settings logic here
+
     alert('Settings saved successfully!');
   };
 

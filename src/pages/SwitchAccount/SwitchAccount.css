@@ -1,0 +1,135 @@
+.switch-account-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Current account display */
+.current-account p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.current-account-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.account-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.account-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.account-info p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Switch Account button */
+.switch-account-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.switch-account-button:hover {
+  background-color: #0056b3;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accounts-list {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.account-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.account-item:hover {
+  background-color: #f5f5f5;
+}
+
+.account-item.selected {
+  background-color: #e1e1e1;
+  font-weight: bold;
+}
+
+/* Dropdown buttons */
+.dropdown-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hide All Channels button */
+.hide-channels-button {
+  background-color: #f0f0f0;
+  color: #555;
+}
+
+.hide-channels-button:hover {
+  background-color: #e1e1e1;
+}

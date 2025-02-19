@@ -1,21 +1,3 @@
-// // src/pages/Help.jsx
-// import React from 'react';
-// import "./Help.css"
-
-// const Help = () => {
-//   return (
-//     <div className="help-container">
-//       <h2>Help</h2>
-//       <p>Here you can find help and support for using the application.</p>
-//       {/* Add FAQ, contact info, or other help content */}
-//     </div>
-//   );
-// };
-
-// export default Help;
-
-
-
 import React from 'react';
 import './Help.css';
 
