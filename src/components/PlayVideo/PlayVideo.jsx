@@ -222,6 +222,7 @@ const PlayVideo = () => {
                 <p>{value_conveter(apiData.statistics.viewCount)} Views • {moment(apiData.snippet.publishedAt).fromNow()}</p>
                 <div>
                     <span><img src={like} alt='' /> {value_conveter(apiData.statistics.likeCount)}</span>
+                    {/* <span><img src={dislike} alt='' /> {value_conveter(apiData.statistics.dislikeCount)}</span> */}
                     <span><img src={dislike} alt='' /> Dislike</span>
                     <span><img src={share} alt='' /> Share</span>
                     <span><img src={save} alt='' /> Save</span>

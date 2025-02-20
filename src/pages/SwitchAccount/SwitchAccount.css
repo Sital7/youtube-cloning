@@ -58,7 +58,7 @@ h2 {
 /* Switch Account button */
 .switch-account-button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: red;
   color: white;
   border: none;
   cursor: pointer;
@@ -68,7 +68,7 @@ h2 {
 }
 
 .switch-account-button:hover {
-  background-color: #0056b3;
+  background-color: #dc0707;
 }
 
 /* Dropdown menu */
@@ -109,8 +109,8 @@ h2 {
 /* Dropdown buttons */
 .dropdown-button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  /* background-color: #eae4e4; */
+  color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -121,7 +121,7 @@ h2 {
 }
 
 .dropdown-button:hover {
-  background-color: #0056b3;
+  background-color: #b9b6b6;
 }
 
 /* Hide All Channels button */
