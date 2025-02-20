@@ -34,3 +34,52 @@
     background-color: #2563eb;
     color: white;
 }
+
+
+
+
+
+/* dark mode css
+
+.button-list-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+  
+  .button-list-button {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-list-button:hover {
+    background-color: #ddd;
+  }
+  
+  .active-button {
+    background-color: #0077ff;
+    color: white;
+  }
+  
+  .dark-mode .button-list-container {
+    background-color: #333;
+  }
+  
+  .dark-mode .button-list-button {
+    background-color: #444;
+    color: white;
+  }
+  
+  .dark-mode .button-list-button:hover {
+    background-color: #555;
+  }
+  
+  .dark-mode .active-button {
+    background-color: #ff6600;
+  }
+   */

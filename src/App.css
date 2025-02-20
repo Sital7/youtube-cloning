@@ -275,3 +275,29 @@ body {
 
 
 
+/* Global dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .sidebar {
+  background-color: #333;
+}
+
+.dark-mode .feed-container {
+  background-color: #181818;
+}
+
+.dark-mode .feed {
+  background-color: #181818;
+}
+
+.dark-mode .card {
+  background-color: #333;
+  color: white;
+}

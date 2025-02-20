@@ -24,3 +24,30 @@
 .card p{
     font-size: 14px;  
 }
+
+
+
+
+
+
+
+
+
+
+/* Dark mode styles */
+/* .dark-mode .feed-container {
+    background-color: #121212;
+}
+
+.dark-mode .feed {
+    background-color: #181818;
+}
+
+.dark-mode .card {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .card h2, .dark-mode .card h3, .dark-mode .card p {
+    color: white;
+} */

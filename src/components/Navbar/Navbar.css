@@ -415,7 +415,16 @@
 
 
 
-
+/* Add this to your Navbar.css */
+/* .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: inherit;
+    margin-left: 10px;
+  } */
+  
 
 
 
