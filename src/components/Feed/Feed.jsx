@@ -189,86 +189,23 @@
 
 
 
-// // edit of second correct code i should use this
-// import React, { useEffect, useState } from 'react';
-// import "./Feed.css";
-// import { Link } from 'react-router-dom';
-// import moment from "moment";
-// import { API_KEY, value_conveter } from '../../data';
-// import ButtonList from '../ButtonList/ButtonList';
-
-
-// const Feed = ({ category = "0" }) => {  
-//     const [data, setData] = useState([]);
-//     const [loading, setLoading] = useState(true);
-    
-//     const fetchData = async () => {
-//         try {
-//             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
-            
-//             const response = await fetch(videoList_url);
-//             const result = await response.json();
-
-//             console.log("API Response:", result);
-
-//             if (result.items && result.items.length > 0) {
-//                 setData(result.items);
-//             } else {
-//                 console.log("No videos found.");
-//                 setData([]);
-//             }
-//         } catch (error) {
-//             console.error("Error fetching data:", error);
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
-
-//     useEffect(() => {
-//         console.log("Category:", category);
-//         fetchData();
-//     }, [category]);
-
-//     return (
-//         <div>
-//             <ButtonList />
-//         <div className='feed'>
-//             {loading ? <p>Loading...</p> : 
-//                 data.length === 0 ? <p>No videos found.</p> : 
-//                 data.map((item, index) => (
-//                     <Link key={index} to={`video/${item.snippet.categoryId}/${item.id}`} className='card'>
-//                      {/* to={`/video/${item.id}`} className='card'> */}
-//                         <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
-//                         <h2>{item.snippet.title}</h2>
-//                         <h3>{item.snippet.channelTitle}</h3>
-//                         <p>{value_conveter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
-//                     </Link>
-//                 ))
-//             }
-//         </div>
-//         </div>
-//     );
-// };
-
-// export default Feed;
-
-
-
+// // // edit of second correct code i should use this
 // // import React, { useEffect, useState } from 'react';
-// // import './Feed.css';
+// // import "./Feed.css";
 // // import { Link } from 'react-router-dom';
 // // import moment from "moment";
 // // import { API_KEY, value_conveter } from '../../data';
 // // import ButtonList from '../ButtonList/ButtonList';
 
-// // const Feed = ({ category = "0" }) => {
+
+// // const Feed = ({ category = "0" }) => {  
 // //     const [data, setData] = useState([]);
 // //     const [loading, setLoading] = useState(true);
-
+    
 // //     const fetchData = async () => {
 // //         try {
 // //             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
-
+            
 // //             const response = await fetch(videoList_url);
 // //             const result = await response.json();
 
@@ -295,40 +232,25 @@
 // //     return (
 // //         <div>
 // //             <ButtonList />
-// //             <div className='feed'>
-// //                 {loading ? <p>Loading...</p> :
-// //                     data.length === 0 ? <p>No videos found.</p> :
-// //                         data.map((item, index) => (
-// //                             <Link key={index} to={`/video/${item.id}`} className='card'>
-// //                                 <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
-// //                                 <h2>{item.snippet.title}</h2>
-// //                                 <h3>{item.snippet.channelTitle}</h3>
-// //                                 <p>{value_conveter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
-// //                             </Link>
-// //                         ))
-// //                 }
-// //             </div>
+// //         <div className='feed'>
+// //             {loading ? <p>Loading...</p> : 
+// //                 data.length === 0 ? <p>No videos found.</p> : 
+// //                 data.map((item, index) => (
+// //                     <Link key={index} to={`video/${item.snippet.categoryId}/${item.id}`} className='card'>
+// //                      {/* to={`/video/${item.id}`} className='card'> */}
+// //                         <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
+// //                         <h2>{item.snippet.title}</h2>
+// //                         <h3>{item.snippet.channelTitle}</h3>
+// //                         <p>{value_conveter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
+// //                     </Link>
+// //                 ))
+// //             }
+// //         </div>
 // //         </div>
 // //     );
 // // };
 
 // // export default Feed;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -397,73 +319,68 @@
 
 
 
-// // // dark mode code
+
+
+
+
+
+
+
+// // // 11
 // // import React, { useEffect, useState } from 'react';
-// // import './Feed.css';
+// // import "./Feed.css";
 // // import { Link } from 'react-router-dom';
-// // import moment from 'moment';
+// // import moment from "moment";
 // // import { API_KEY, value_conveter } from '../../data';
-// // import ButtonList from '../ButtonList/ButtonList';  // Import ButtonList
+// // import ButtonList from '../ButtonList/ButtonList';
 
-// // const Feed = ({ category = '0', darkMode }) => {  // Receive darkMode as a prop
-// //   const [data, setData] = useState([]);
-// //   const [loading, setLoading] = useState(true);
+// // const Feed = () => {  
+// //     const [category, setCategory] = useState("0");
+// //     const [data, setData] = useState([]);
+// //     const [loading, setLoading] = useState(true);
+    
+// //     const fetchData = async () => {
+// //         try {
+// //             setLoading(true);
+// //             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
+            
+// //             const response = await fetch(videoList_url);
+// //             const result = await response.json();
 
-// //   const fetchData = async () => {
-// //     try {
-// //       const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
-      
-// //       const response = await fetch(videoList_url);
-// //       const result = await response.json();
+// //             if (result.items && result.items.length > 0) {
+// //                 setData(result.items);
+// //             } else {
+// //                 setData([]);
+// //             }
+// //         } catch (error) {
+// //             console.error("Error fetching data:", error);
+// //         } finally {
+// //             setLoading(false);
+// //         }
+// //     };
 
-// //       console.log('API Response:', result);
+// //     useEffect(() => {
+// //         fetchData();
+// //     }, [category]);  // Fetch data when category changes
 
-// //       if (result.items && result.items.length > 0) {
-// //         setData(result.items);
-// //       } else {
-// //         console.log('No videos found.');
-// //         setData([]);
-// //       }
-// //     } catch (error) {
-// //       console.error('Error fetching data:', error);
-// //     } finally {
-// //       setLoading(false);
-// //     }
-// //   };
-
-// //   useEffect(() => {
-// //     console.log('Category:', category);
-// //     fetchData();
-// //   }, [category]);
-
-// //   return (
-// //     <div className={`feed-container ${darkMode ? 'dark-mode' : ''}`}>
-// //       <ButtonList darkMode={darkMode} onCategoryChange={(category) => console.log(category)} />
-// //       <div className={`feed ${darkMode ? 'dark-mode' : ''}`}>
-// //         {loading ? (
-// //           <p>Loading...</p>
-// //         ) : data.length === 0 ? (
-// //           <p>No videos found.</p>
-// //         ) : (
-// //           data.map((item, index) => (
-// //             <Link
-// //               key={index}
-// //               to={`video/${item.snippet.categoryId}/${item.id}`}
-// //               className={`card ${darkMode ? 'dark-mode' : ''}`}
-// //             >
-// //               <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
-// //               <h2>{item.snippet.title}</h2>
-// //               <h3>{item.snippet.channelTitle}</h3>
-// //               <p>
-// //                 {value_conveter(item.statistics.viewCount)} views &bull;{' '}
-// //                 {moment(item.snippet.publishedAt).fromNow()}
-// //               </p>
-// //             </Link>
-// //           ))
-// //         )}
-// //       </div>
-// //     </div>
-// //   );
+// //     return (
+// //         <div>
+// //             <ButtonList setCategory={setCategory} />
+// //             <div className='feed'>
+// //                 {loading ? <p>Loading...</p> : 
+// //                     data.length === 0 ? <p>No videos found.</p> : 
+// //                     data.map((item) => (
+// //                         <Link key={item.id} to={`/video/${item.snippet.categoryId}/${item.id}`} className='card'>
+// //                             <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
+// //                             <h2>{item.snippet.title}</h2>
+// //                             <h3>{item.snippet.channelTitle}</h3>
+// //                             <p>{value_conveter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
+// //                         </Link>
+// //                     ))
+// //                 }
+// //             </div>
+// //         </div>
+// //     );
 // // };
 
 // // export default Feed;
@@ -472,7 +389,67 @@
 
 
 
+// import React, { useEffect, useState } from 'react';
+// import "./Feed.css";
+// import { Link } from 'react-router-dom';
+// import moment from "moment";
+// import { API_KEY, value_conveter } from '../../data';
+// import ButtonList from '../ButtonList/ButtonList'; // Importing ButtonList
 
+// const Feed = ({ category, setCategory }) => {  
+//     const [data, setData] = useState([]);
+//     const [loading, setLoading] = useState(true);
+    
+//     const fetchData = async () => {
+//         try {
+//             setLoading(true);
+//             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
+            
+//             const response = await fetch(videoList_url);
+//             const result = await response.json();
+
+//             if (result.items && result.items.length > 0) {
+//                 setData(result.items);
+//             } else {
+//                 setData([]);
+//             }
+//         } catch (error) {
+//             console.error("Error fetching data:", error);
+//         } finally {
+//             setLoading(false);
+//         }
+//     };
+
+//     useEffect(() => {
+//         fetchData();
+//     }, [category]);  // Fetch data when category changes
+
+//     return (
+//         <div>
+//             {/* Ensure ButtonList is visible */}
+//             <ButtonList setCategory={setCategory} />
+
+//             <div className='feed'>
+//                 {loading ? <p>Loading...</p> : 
+//                     data.length === 0 ? <p>No videos found.</p> : 
+//                     data.map((item) => (
+//                         <Link key={item.id} to={`/video/${item.snippet.categoryId}/${item.id}`} className='card'>
+//                             <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
+//                             <h2>{item.snippet.title}</h2>
+//                             <h3>{item.snippet.channelTitle}</h3>
+//                             <p>{value_conveter(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
+//                         </Link>
+//                     ))
+//                 }
+//             </div>
+//         </div>
+//     );
+// };
+
+// export default Feed;
+
+
+// correct 123
 import React, { useEffect, useState } from 'react';
 import "./Feed.css";
 import { Link } from 'react-router-dom';
@@ -481,23 +458,20 @@ import { API_KEY, value_conveter } from '../../data';
 import ButtonList from '../ButtonList/ButtonList';
 
 const Feed = ({ category, setCategory }) => {
-    const [data, setData] = useState([]); // Holds all the fetched videos
+    const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [nextPageToken, setNextPageToken] = useState(null); // Stores the token to fetch more videos
-
-    const fetchData = async (pageToken = '') => {
+    
+    const fetchData = async () => {
         try {
             setLoading(true);
-            // Update the API URL to handle pagination with nextPageToken
-            const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}${pageToken ? `&pageToken=${pageToken}` : ''}`;
+            const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`;
 
+            
             const response = await fetch(videoList_url);
             const result = await response.json();
 
             if (result.items && result.items.length > 0) {
-                // If there's data, append it to the existing data
-                setData((prevData) => [...prevData, ...result.items]);
-                setNextPageToken(result.nextPageToken); // Store the nextPageToken for subsequent fetches
+                setData(result.items);
             } else {
                 setData([]);
             }
@@ -509,14 +483,8 @@ const Feed = ({ category, setCategory }) => {
     };
 
     useEffect(() => {
-        fetchData(); // Fetch the initial set of videos
+        fetchData();
     }, [category]);
-
-    const loadMoreVideos = () => {
-        if (nextPageToken && !loading) {
-            fetchData(nextPageToken); // Fetch the next set of videos
-        }
-    };
 
     return (
         <div>
@@ -536,15 +504,89 @@ const Feed = ({ category, setCategory }) => {
                     ))
                 }
             </div>
-
-            {/* Display Load More button if there's a next page */}
-            {nextPageToken && !loading && (
-                <div className="load-more">
-                    <button onClick={loadMoreVideos}>Load More</button>
-                </div>
-            )}
         </div>
     );
 };
 
 export default Feed;
+
+
+
+
+
+
+// import  { useEffect, useState } from 'react';
+// import "./Feed.css";
+// import { Link } from 'react-router-dom';
+// import moment from "moment";
+// import { API_KEY, value_conveter } from '../../data';
+// import ButtonList from '../ButtonList/ButtonList';
+
+// const Feed = ({ category, setCategory }) => {
+//     const [data, setData] = useState([]); // Holds all the fetched videos
+//     const [loading, setLoading] = useState(true);
+//     const [nextPageToken, setNextPageToken] = useState(null); // Stores the token to fetch more videos
+
+//     const fetchData = async (pageToken = '') => {
+//         try {
+//             setLoading(true);
+//             // Update the API URL to handle pagination with nextPageToken
+//             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}${pageToken ? `&pageToken=${pageToken}` : ''}`;
+
+//             const response = await fetch(videoList_url);
+//             const result = await response.json();
+
+//             if (result.items && result.items.length > 0) {
+//                 // If there's data, append it to the existing data
+//                 setData((prevData) => [...prevData, ...result.items]);
+//                 setNextPageToken(result.nextPageToken); // Store the nextPageToken for subsequent fetches
+//             } else {
+//                 setData([]);
+//             }
+//         } catch (error) {
+//             console.error("Error fetching data:", error);
+//         } finally {
+//             setLoading(false);
+//         }
+//     };
+
+//     useEffect(() => {
+//         fetchData(); // Fetch the initial set of videos
+//     }, [category]);
+
+//     const loadMoreVideos = () => {
+//         if (nextPageToken && !loading) {
+//             fetchData(nextPageToken); // Fetch the next set of videos
+//         }
+//     };
+
+//     return (
+//         <div>
+//             {/* Ensure ButtonList updates category */}
+//             <ButtonList setCategory={setCategory} /> 
+
+//             <div className='feed'>
+//                 {loading ? <p>Loading...</p> : 
+//                     data.length === 0 ? <p>No videos found.</p> : 
+//                     data.map((item) => (
+//                         <Link key={item.id} to={`/video/${item.snippet.categoryId}/${item.id}`} className='card'>
+//                             <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
+//                             <h2>{item.snippet.title}</h2>
+//                             <h3>{item.snippet.channelTitle}</h3>
+//                             <p>{value_conveter(item.statistics.viewCount)} views • {moment(item.snippet.publishedAt).fromNow()}</p>
+//                         </Link>
+//                     ))
+//                 }
+//             </div>
+
+//             {/* Display Load More button if there's a next page */}
+//             {nextPageToken && !loading && (
+//                 <div className="load-more">
+//                     <button onClick={loadMoreVideos}>Load More</button>
+//                 </div>
+//             )}
+//         </div>
+//     );
+// };
+
+// export default Feed;

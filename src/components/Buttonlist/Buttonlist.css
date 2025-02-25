@@ -1,4 +1,4 @@
-.button-list-container {
+.button-list {
     display: flex;
     width: 100%;
     overflow-x: auto;
@@ -9,11 +9,11 @@
     background-color: #f8f9fa;
 }
 
-.button-list-container::-webkit-scrollbar {
+.button-list::-webkit-scrollbar {
     display: none;
 }
 
-.button-list-button {
+.button-list button {
     flex-shrink: 0;
     padding: 12px 16px;
     border-radius: 20px;
@@ -22,12 +22,11 @@
     cursor: pointer;
     border: none;
     outline: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #e4e6eb;
 }
 
-.button-list-button:hover {
+.button-list button:hover {
     background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
 }
 
 .active-button {
@@ -35,51 +34,7 @@
     color: white;
 }
 
-
-
-
-
-/* dark mode css
-
-.button-list-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    overflow-x: auto;
-  }
-  
-  .button-list-button {
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button-list-button:hover {
-    background-color: #ddd;
-  }
-  
-  .active-button {
-    background-color: #0077ff;
+.button-list button:focus {
+    background-color: #2563eb;
     color: white;
-  }
-  
-  .dark-mode .button-list-container {
-    background-color: #333;
-  }
-  
-  .dark-mode .button-list-button {
-    background-color: #444;
-    color: white;
-  }
-  
-  .dark-mode .button-list-button:hover {
-    background-color: #555;
-  }
-  
-  .dark-mode .active-button {
-    background-color: #ff6600;
-  }
-   */
+}
