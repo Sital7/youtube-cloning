@@ -312,7 +312,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/home" element={<><Navbar setSidebar={setSidebar} /><Home sidebar={sidebar} /></>} />
         <Route path="/shorts" element={<Shorts />} />
-        <Route path="/video/:videoId" element={<><Navbar setSidebar={setSidebar} /><Video /></>} />
+        <Route path="/video/:categoryId/:videoId" element={<><Navbar setSidebar={setSidebar} /><Video /></>} />
         <Route path="/search" element={<><Navbar setSidebar={setSidebar} /><SearchResults /></>} />
         <Route path="/switch-account" element={<><Navbar setSidebar={setSidebar} /><SwitchAccount /></>} />
         <Route path="/login" element={<><Navbar setSidebar={setSidebar} /><Login /></>} />
