@@ -95,97 +95,126 @@ body {
 
 
 
-   .landing-page {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+/* General Page Styling */
+.landing-page {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* Navbar - Scoped Only to Landing Page */
 .landing-page .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #181818;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: #181818;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .landing-page .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: red; /* Red color for logo */
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
 }
 
 .landing-page .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .landing-page .nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
 }
 
+.landing-page .nav-links li a:hover {
+  color: red;
+}
+
+/* Hero Section */
 .landing-page .hero {
-    margin-top: 50px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Centering the content horizontally */
-    text-align: center;  /* Ensures the text is centered */
+  margin-top: 50px;
+  padding: 40px;
+  text-align: center;
 }
 
 .landing-page .hero h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
 .landing-page .hero p {
-    font-size: 18px;
-    color: #bbbbbb; /* Light gray text */
-    margin-bottom: 20px;
+  font-size: 18px;
+  color: #bbbbbb;
+  margin-bottom: 20px;
 }
 
 .landing-page .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: red; /* Red color for button */
-    color: white;
-    font-size: 18px;
-    border-radius: 8px;
-    text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
+.landing-page .cta-button:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+/* Features Section */
 .landing-page .features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
 }
 
-.landing-page .feature-item {
-    background-color: #222; /* Dark gray for feature items */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+/* Feature Cards */
+.landing-page .feature-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.landing-page .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* Feature Card Icons */
 .landing-page .icon {
-    font-size: 40px;
-    color: red; /* Red color for icons */
-    margin-bottom: 10px;
+  font-size: 40px;
+  color: red;
+  margin-bottom: 10px;
 }
 
-.landing-page .page {
-    text-align: center;
-    margin-top: 30px;
+/* Feature Card Text */
+.landing-page .feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.landing-page .feature-card p {
+  color: #bbbbbb;
+  font-size: 16px;
 }
