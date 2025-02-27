@@ -347,6 +347,8 @@ import Shorts from './components/Shots/Shorts'; // Ensure proper import of Short
 
 import LandingPage from './pages/LandingPage/LandingPage';
 import WatchVideos from './components/WatchVideos/WatchVideos';
+import UploadContent from './components/UploadContent/UploadContent';
+import Profile from './pages/Profile/Profile';
 
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
@@ -358,14 +360,17 @@ const App = () => {
         <Route path="/" element={<LandingPage setCategory={setCategory} />} />
         <Route path="/home" element={<><Navbar setSidebar={setSidebar} /><Home sidebar={sidebar} /></>} />
         <Route path="/shorts" element={<Shorts />} />
+        <Route path="/upload" element={<UploadContent />} />
         <Route path="/watchvideos/:categoryId" element={<WatchVideos category={category} setCategory={setCategory} />} />
         <Route path="/video/:categoryId/:videoId" element={<><Navbar setSidebar={setSidebar} /><Video /></>} />
         <Route path="/search" element={<><Navbar setSidebar={setSidebar} /><SearchResults /></>} />
         <Route path="/switch-account" element={<><Navbar setSidebar={setSidebar} /><SwitchAccount /></>} />
         <Route path="/login" element={<><Navbar setSidebar={setSidebar} /><Login /></>} />
         <Route path="/signup" element={<><Navbar setSidebar={setSidebar} /><SignUp /></>} />
+        <Route path="/profile" element={<><Navbar setSidebar={setSidebar} /><Profile /></>} />
         <Route path="/settings" element={<><Navbar setSidebar={setSidebar} /><Settings /></>} />
         <Route path="/help" element={<><Navbar setSidebar={setSidebar} /><Help /></>} />
+        <Route path="/uploadcontent" element={<><Navbar setSidebar={setSidebar} /><UploadContent /></>} />
         <Route path="/notifications" element={<><Navbar setSidebar={setSidebar} /><NotificationsPage /></>} />
       </Routes>
     </>
