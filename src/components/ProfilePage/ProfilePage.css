@@ -1,0 +1,131 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .profile-page-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .main-content {
+    flex: 1; /* This ensures the main content takes the remaining space */
+    margin-left: 200px; /* Adjust this based on the new sidebar width */
+    padding: 20px; /* Padding around the main content */
+    background-color: #f9f9f9; /* Optional background color for the content area */
+  }
+  
+  .profile-sidebar {
+    width: 240px; /* Sidebar width reduced to medium */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 80px; /* Adjust padding for sidebar content */
+    background-color: #fff;
+    z-index: 10;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for the sidebar */
+  }
+  
+  .profile-sidebar hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 85%;
+    margin: 10px 0;
+  }
+  
+  .side-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    gap: 15px;
+    border-radius: 8px;
+  }
+  
+  .side-link:hover {
+    background: #f2f2f2;
+  }
+  
+  .side-link img, .side-link svg {
+    width: 25px;
+    height: 25px;
+    color: #706a6a;
+  }
+  
+  .side-link p {
+    font-size: 13px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .profile-explore {
+    font-size: 14px;
+    margin: 20px 0;
+    color: #5a5a5a;
+  }
+  
+  .profile-user-section {
+    margin-top: 30px;
+  }
+  
+  .small-sidebar {
+    width: 80px; /* Smaller width for collapsed sidebar */
+  }
+  
+  .small-sidebar .side-link p {
+    display: none; /* Hide text in small sidebar */
+  }
+  
+  .small-sidebar hr {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  
+  .link-style {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .profile-subscribed-list h3 {
+    font-size: 14px;
+    margin: 20px 0;
+    color: #5a5a5a;
+  }
+  
+  .profile-subscribed-list img {
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Media Query for Mobile View */
+  @media (max-width: 768px) {
+    .profile-page-content {
+      margin-left: 0; /* Full width for mobile */
+    }
+  
+    .profile-sidebar {
+      width: 100%; /* Make sidebar full width on smaller screens */
+      padding-top: 20px;
+    }
+  
+    .profile-sidebar hr {
+      width: 100%;
+    }
+  
+    .side-link {
+      gap: 10px;
+    }
+  
+    .small-sidebar {
+      display: none;
+    }
+  }
+  
