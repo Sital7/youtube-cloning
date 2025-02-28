@@ -1,214 +1,73 @@
-// // // // // // // // src/components/ShortsItem.jsx
-// // // // // // // import React, { useState, useEffect } from "react";
-// // // // // // // import VideoPlayer from "../VideoPlayer/VideoPlayer";
-
-// // // // // // // const ShortsItem = ({ video }) => {
-// // // // // // //   const [isPlaying, setIsPlaying] = useState(false);
-
-// // // // // // //   useEffect(() => {
-// // // // // // //     const handleScroll = () => {
-// // // // // // //       const videoElement = document.getElementById(`video-${video.id}`);
-// // // // // // //       const rect = videoElement.getBoundingClientRect();
-// // // // // // //       if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-// // // // // // //         setIsPlaying(true);
-// // // // // // //       } else {
-// // // // // // //         setIsPlaying(false);
-// // // // // // //       }
-// // // // // // //     };
-
-// // // // // // //     window.addEventListener("scroll", handleScroll);
-
-// // // // // // //     return () => {
-// // // // // // //       window.removeEventListener("scroll", handleScroll);
-// // // // // // //     };
-// // // // // // //   }, [video.id]);
-
-// // // // // // //   return (
-// // // // // // //     <div className="shorts-item">
-// // // // // // //       <h3>{video.title}</h3>
-// // // // // // //       <VideoPlayer isPlaying={isPlaying} videoUrl={video.videoUrl} id={video.id} />
-// // // // // // //     </div>
-// // // // // // //   );
-// // // // // // // };
-
-// // // // // // // export default ShortsItem;
-
-
-
-
-// // // // // import React from 'react';
-// // // // // import { value_conveter } from '../../data'; // Assuming you want to convert view count to M/K
-
-// // // // // const ShortsItem = ({ video }) => {
-// // // // //   // Log the video object to check its structure
-// // // // //   console.log(video);
-
-// // // // //   const videoId = video?.resourceId?.videoId;  // Safely access videoId
-// // // // //   const title = video?.title || 'Untitled'; // Default title if not present
-// // // // //   const viewCount = video?.viewCount || 0;  // Default view count if not present
-
-// // // // //   // Check if videoId is available before rendering
-// // // // //   if (!videoId) {
-// // // // //     return <div>Error: Missing videoId</div>;
-// // // // //   }
-
-// // // // //   return (
-// // // // //     <div className="shorts-item">
-// // // // //       <video src={`https://www.youtube.com/watch?v=${videoId}`} controls />
-// // // // //       <h3>{title}</h3>
-// // // // //       <p>{value_conveter(viewCount)} Views</p>
-// // // // //     </div>
-// // // // //   );
-// // // // // };
-
-// // // // // export default ShortsItem;
-
-
-
-
-
-// // // // import React from 'react';
-// // // // import { value_conveter } from '../../data'; // Assuming you want to convert view count to M/K
-
-// // // // const ShortsItem = ({ video }) => {
-// // // //   // Log the video object to check its structure
-// // // //   console.log(video);
-
-// // // //   const videoId = video?.id?.videoId;  // Correct path to videoId based on the response structure
-// // // //   const title = video?.snippet?.title || 'Untitled'; // Default title if not present
-// // // //   const viewCount = video?.statistics?.viewCount || 0;  // Default view count if not present
-
-// // // //   // Check if videoId is available before rendering
-// // // //   if (!videoId) {
-// // // //     return <div>Error: Missing videoId</div>;
-// // // //   }
-
-// // // //   return (
-// // // //     <div className="shorts-item">
-// // // //       <video src={`https://www.youtube.com/watch?v=${videoId}`} controls  />
-      
-// // // //       <h3>{title} </h3>
-// // // //       <p>{value_conveter(viewCount)} Views</p>
-// // // //     </div>
-// // // //   );
-// // // // };
-
-// // // // export default ShortsItem;
-
-
-
-// // // import React from 'react';
-// // // import { value_conveter } from '../../data'; // Assuming you want to convert view count to M/K
-
-// // // const ShortsItem = ({ video }) => {
-// // //   // Log the video object to check its structure
-// // //   console.log(video);
-
-// // //   // Correctly access videoId from the id object
-// // //   const videoId = video?.id?.videoId;
-// // //   const title = video?.snippet?.title || 'Untitled'; // Default title if not present
-// // //   const viewCount = video?.statistics?.viewCount || 0;  // Default view count if not present
-
-// // //   // Check if videoId is available before rendering
-// // //   if (!videoId) {
-// // //     return <div>Error: Missing videoId</div>;
-// // //   }
-
-// // //   return (
-// // //     <div className="shorts-item">
-// // //       <video src={`https://www.youtube.com/watch?v=${videoId}`} controls />
-// // //       <h3>{title}</h3>
-// // //       <p>{value_conveter(viewCount)} Views</p>
-// // //     </div>
-// // //   );
-// // // };
-
-// // // export default ShortsItem;
-
-
-
-
-
-// // import React from 'react';
-// // import { value_conveter } from '../../data'; // Assuming you want to convert view count to M/K
-
-// // const ShortsItem = ({ video }) => {
-// //   const videoId = video?.id?.videoId; // Correct path to videoId based on the response structure
-// //   const title = video?.snippet?.title || 'Untitled'; // Default title if not present
-// //   const viewCount = video?.statistics?.viewCount || 0; // Default view count if not present
-// //   const duration = video?.contentDetails?.duration || '0'; // Default duration if not present
-
-// //   // Convert duration to a readable format if necessary (for example, PT1M15S to 1:15)
-// //   const formattedDuration = duration ? duration.replace('PT', '').replace('M', ':').replace('S', '') : '0:00';
-
-// //   if (!videoId) {
-// //     return <div>Error: Missing videoId</div>;
-// //   }
-
-// //   return (
-// //     <div className="shorts-item">
-// //       <video src={`https://www.youtube.com/watch?v=${videoId}`} controls />
-// //       <h3>{title}</h3>
-// //       <p>{value_conveter(viewCount)} Views</p>
-// //       <p>Duration: {formattedDuration}</p>
-// //     </div>
-// //   );
-// // };
-
-// // export default ShortsItem;
-
-
-
 
 // import React from 'react';
+// // import './ShortsItem.css';
+// import Like from '../../assets/like.png';
+// import DisLike from '../../assets/dislike.png';
+// import Share from '../../assets/share.png';
+// import Comment from '../../assets/comment.png';
+// import Views from '../../assets/views.png';
 
-// const ShortsItem = ({ video }) => {
-//   const videoId = video.id.videoId;
-//   const videoTitle = video.snippet.title;
-//   const videoUrl = `https://www.youtube.com/embed/${videoId}`;
-
-//   return (
-//     <div className="short-item">
-//       <h3>{videoTitle}</h3>
-//       <iframe
-//         width="100%"
-//         height="315"
-//         src={videoUrl}
-//         frameBorder="0"
-//         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-//         allowFullScreen
-//         title={videoTitle}
-//       ></iframe>
-//       <p>{video.snippet.description}</p>
-//     </div>
-//   );
+// const formatCount = (num) => {
+//   if (!num) return 'N/A';
+//   return num >= 1000000
+//     ? (num / 1000000).toFixed(1) + 'M'
+//     : num >= 1000
+//     ? (num / 1000).toFixed(1) + 'K'
+//     : num;
 // };
 
-// export default ShortsItem;
-
-
-
-// 2
-// import React from 'react';
-// import './ShortsItem.css';
+// const formatDuration = (duration) => {
+//   if (!duration) return 'Unknown Duration';
+//   const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+//   const hours = match[1] ? `${match[1]}:` : '';
+//   const minutes = match[2] ? `${match[2]}`.padStart(2, '0') : '00';
+//   const seconds = match[3] ? `${match[3]}`.padStart(2, '0') : '00';
+//   return `${hours}${minutes}:${seconds}`;
+// };
 
 // const ShortsItem = ({ video }) => {
+//   const handleShare = () => {
+//     const shareUrl = `https://www.youtube.com/watch?v=${video.id.videoId}`;
+//     if (navigator.share) {
+//       navigator.share({
+//         title: video.snippet.title,
+//         url: shareUrl,
+//       }).catch((error) => console.error('Error sharing', error));
+//     } else {
+//       alert(`Share this link: ${shareUrl}`);
+//     }
+//   };
+
 //   return (
 //     <div className="shorts-item">
-//       {/* Embed YouTube Shorts using iframe */}
-//       <iframe
-//         src={`https://www.youtube.com/embed/${video.id.videoId}`}
-//         title={video.snippet.title}
-//         frameBorder="0"
-//         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-//         allowFullScreen
-//         className="shorts-video"
-//       ></iframe>
-//       <div className="shorts-info">
-//         <h3>{video.snippet.title}</h3>
-//         <p>{video.snippet.description}</p>
-//         <div className="video-duration">{video.contentDetails.duration}</div>
-//         <div className="video-views">{video.statistics.viewCount} Views</div>
+//       {/* Video with title overlay */}
+//       <div className="shorts-video-container">
+//         <iframe
+//           src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&loop=1`}
+//           title={video.snippet.title}
+//           frameBorder="0"
+//           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+//           allowFullScreen
+//           className="shorts-video"
+//         ></iframe>
+
+//         {/* Title inside video */}
+//         <div className="video-title-overlay">
+//           {video.snippet.title}
+//         </div>
+//       </div>
+
+//       {/* Video details section */}
+//       <div className="video-details">
+//         {/* <span className="video-duration">⏳ {formatDuration(video.contentDetails.duration)}</span> */}
+//         <span className="video-views"><img src={Views} alt="Views" /> {formatCount(video.statistics.viewCount)} </span>
+//         <span className="video-likes"><img src={Like} alt="Like" /> {formatCount(video.statistics.likeCount)} </span>
+//         <span className="video-dislikes"><img src={DisLike} alt="Dislike" /> {formatCount(video.statistics.dislikeCount)} </span>
+//         <span className="video-comments"><img src={Comment} alt="Comment" /> {formatCount(video.statistics.commentCount)} </span>
+
+//         <button className="video-share" onClick={handleShare}>
+//           <img src={Share} alt="Share" /> Share
+//         </button>
 //       </div>
 //     </div>
 //   );
@@ -216,28 +75,75 @@
 
 // export default ShortsItem;
 
-
-
 import React from 'react';
-import './ShortsItem.css';
+// import './ShortsItem.css';
+import Like from '../../assets/like.png';
+import DisLike from '../../assets/dislike.png';
+import Share from '../../assets/share.png';
+import Comment from '../../assets/comment.png';
+import Views from '../../assets/views.png';
+
+const formatCount = (num) => {
+  if (!num) return 'N/A';
+  return num >= 1000000
+    ? (num / 1000000).toFixed(1) + 'M'
+    : num >= 1000
+    ? (num / 1000).toFixed(1) + 'K'
+    : num;
+};
+
+const formatDuration = (duration) => {
+  if (!duration) return 'Unknown Duration';
+  const match = duration.match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/);
+  const hours = match[1] ? `${match[1]}:` : '';
+  const minutes = match[2] ? `${match[2]}`.padStart(2, '0') : '00';
+  const seconds = match[3] ? `${match[3]}`.padStart(2, '0') : '00';
+  return `${hours}${minutes}:${seconds}`;
+};
 
 const ShortsItem = ({ video }) => {
+  const handleShare = () => {
+    const shareUrl = `https://www.youtube.com/watch?v=${video.id.videoId}`;
+    if (navigator.share) {
+      navigator.share({
+        title: video.snippet.title,
+        url: shareUrl,
+      }).catch((error) => console.error('Error sharing', error));
+    } else {
+      alert(`Share this link: ${shareUrl}`);
+    }
+  };
+
   return (
     <div className="shorts-item">
-      {/* Embed YouTube Shorts using iframe */}
-      <iframe
-        src={`https://www.youtube.com/embed/${video.id.videoId}`}
-        title={video.snippet.title}
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="shorts-video"
-      ></iframe>
-      <div className="shorts-info">
-        <h3>{video.snippet.title}</h3>
-        <p>{video.snippet.description}</p>
-        <div className="video-duration">{video.contentDetails.duration}</div>
-        <div className="video-views">{video.statistics.viewCount} Views</div>
+      {/* Video with title overlay */}
+      <div className="shorts-video-container">
+        <iframe
+          src={`https://www.youtube.com/embed/${video.id.videoId}?autoplay=1&mute=1&loop=1`}
+          title={video.snippet.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          className="shorts-video"
+        ></iframe>
+
+        {/* Title inside video */}
+        <div className="video-title-overlay">
+          {video.snippet.title}
+        </div>
+      </div>
+
+      {/* Video details section */}
+      <div className="video-details">
+        {/* <span className="video-duration">⏳ {formatDuration(video.contentDetails.duration)}</span> */}
+        <span className="video-views"><img src={Views} alt="Views" /> {formatCount(video.statistics.viewCount)} </span>
+        <span className="video-likes"><img src={Like} alt="Like" /> {formatCount(video.statistics.likeCount)} </span>
+        <span className="video-dislikes"><img src={DisLike} alt="Dislike" /> {formatCount(video.statistics.dislikeCount)} </span>
+        <span className="video-comments"><img src={Comment} alt="Comment" /> {formatCount(video.statistics.commentCount)} </span>
+
+        <button className="video-share" onClick={handleShare}>
+          <img src={Share} alt="Share" /> Share
+        </button>
       </div>
     </div>
   );
