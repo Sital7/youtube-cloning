@@ -1,0 +1,114 @@
+.profile-sidebar {
+    background: #fff;
+    width: 200px; /* Increase sidebar width */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-top: 80px;
+    z-index: 10;
+  }
+  
+  .profile-sidebar hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 85%;
+    margin: 10px 0;
+  }
+  
+  .side-link {
+    display: flex;
+    align-items: center; /* Vertically align the image and text */
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    gap: 15px;
+    border-radius: 8px;
+  }
+  
+  .side-link:hover {
+    background: #f2f2f2;
+  }
+  
+  .side-link img, .side-link svg {
+    width: 25px;
+    height: 25px;
+    color: #706a6a;
+    margin: 0; /* Ensure no margin around the image */
+  }
+  
+  .side-link p {
+    font-size: 13px;
+    color: #333;
+    margin: 0; /* Remove any default margin */
+  }
+  
+  .link-style {
+    display: flex;
+    align-items: center; /* Align text and image inside the link */
+    gap: 8px;
+    text-decoration: none; /* Prevent text underline */
+    color: inherit; /* Ensure inherited color */
+  }
+  
+  .shortcut-link {
+    padding-top: 20px;
+  }
+  
+  .profile-explore {
+    font-size: 14px;
+    margin: 20px 0;
+    color: #5a5a5a;
+  }
+  
+  .profile-user-section {
+    margin-top: 30px;
+  }
+  
+  .small-sidebar {
+    width: 80px; /* Smaller width for collapsed sidebar */
+  }
+  
+  .small-sidebar .side-link p {
+    display: none; /* Hide text in small sidebar */
+  }
+  
+  .small-sidebar hr {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  
+  .profile-subscribed-list h3 {
+    font-size: 14px;
+    margin: 20px 0;
+    color: #5a5a5a;
+  }
+  
+  .profile-subscribed-list img {
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Media Query for Mobile View */
+  @media (max-width: 768px) {
+    .profile-sidebar {
+      width: 100%; /* Make sidebar full width on smaller screens */
+      padding-top: 20px;
+    }
+  
+    .profile-sidebar hr {
+      width: 100%;
+    }
+  
+    .side-link {
+      gap: 10px;
+    }
+  
+    .small-sidebar {
+      display: none;
+    }
+  }
+  
