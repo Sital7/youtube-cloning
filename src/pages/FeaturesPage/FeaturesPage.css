@@ -1,0 +1,53 @@
+.features-page {
+    padding: 20px;
+    color: black;
+    text-align: center;
+  }
+  
+  .features-page h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .feature-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+  }
+  
+  .feature-card .icon {
+    font-size: 40px;
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  .feature-card p {
+    color: #bbbbbb;
+    font-size: 16px;
+  }
+  

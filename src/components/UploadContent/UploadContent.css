@@ -1,4 +1,4 @@
-.upload-content {
+/* .upload-content {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -74,5 +74,83 @@
   .upload-content .upload-icon img:hover {
     background-color: #cccccc;
     transform: scale(1.1);
+  }
+   */
+
+/* good */
+   .upload-page {
+    height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .upload-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .upload-icon {
+    font-size: 60px;
+    color: #fa0717;
+    margin-bottom: 20px;
+  }
+  
+  .upload-card h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  
+  .upload-card p {
+    font-size: 14px;
+    color: #606060;
+    margin-bottom: 30px;
+  }
+  
+  .upload-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f60717;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .upload-btn:hover {
+    background-color:#b51822;
+  }
+  
+
+  .upload-btn {
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #ea1c2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-btn:disabled {
+    background-color: #ddd;
+  }
+  
+  .upload-success {
+    margin-top: 20px;
+  }
+  
+  .upload-success video,
+  .upload-success img {
+    max-width: 100%;
+    border-radius: 8px;
   }
   

@@ -112,7 +112,7 @@ const ProfileSidebar = ({ sidebar, category, setCategory }) => {
   // Fetch library books
   useEffect(() => {
     if (category === 'libraryBooks') {
-      fetch('https://api.example.com/libraryBooks')  // Replace with your API endpoint
+      fetch('https://api.example.com/libraryBooks')  
         .then((response) => response.json())
         .then((data) => setLibraryBooks(data))
         .catch((error) => console.error('Error fetching library books:', error));
@@ -122,7 +122,6 @@ const ProfileSidebar = ({ sidebar, category, setCategory }) => {
   return (
     <div className={`profile-sidebar ${sidebar ? '' : 'small-sidebar'}`}>
       <div className="shortcut-link">
-        {/* Home Section */}
         <div className={`side-link ${category === 0 ? 'active' : ''}`}>
           <Link to="/Home" className="link-style">
             <img src={home} alt="home" />
@@ -130,7 +129,6 @@ const ProfileSidebar = ({ sidebar, category, setCategory }) => {
           </Link>
         </div>
 
-        {/* Shorts Section */}
         <div className={`side-link ${category === 30 ? 'active' : ''}`}>
           <Link to="/shorts" className="link-style">
             <SiYoutubeshorts size={24} />
@@ -138,14 +136,12 @@ const ProfileSidebar = ({ sidebar, category, setCategory }) => {
           </Link>
         </div>
 
-        {/* Subscriptions Section */}
         <div className={`side-link ${category === 0 ? 'active' : ''}`} onClick={() => setCategory(0)}>
           <MdSubscriptions />
           <p>Subscriptions</p>
         </div>
         <hr />
 
-        {/* User Section */}
         <div className="side-link" onClick={() => setCategory('you')}>
           <YouSection />
         </div>

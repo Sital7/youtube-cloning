@@ -325,7 +325,6 @@ const Navbar = ({ setSidebar }) => {
 
   return (
     <nav className="navbar">
-      {/* Left Section */}
       <div className="nav-left">
         <img
           className="menu-icon"
@@ -333,12 +332,11 @@ const Navbar = ({ setSidebar }) => {
           src={menu_icon}
           alt="menu"
         />
-        <Link to="/">
+        <Link to="/home">
           <img className="logo" src={logo} alt="YouTube Clone" />
         </Link>
       </div>
 
-      {/* Middle Section - Search Bar */}
       <div className="nav-middle">
         <div className="search-box">
           <input
@@ -352,19 +350,16 @@ const Navbar = ({ setSidebar }) => {
         </div>
       </div>
 
-      {/* Right Section - Icons */}
       <div className="nav-right">
-        <Link to="/uploadcontent">
+        <Link to="/upload">
           <img src={upload_icon} alt="Upload" className="hide-on-mobile" />
         </Link>
-        <img src={more_icon} alt="More" className="hide-on-mobile" />
+        {/* <img src={more_icon} alt="More" className="hide-on-mobile" /> */}
         
-        {/* Link to Notifications */}
         <Link to="/notifications">
           <img src={notification_icon} alt="Notifications" className="hide-on-mobile" />
         </Link>
 
-        {/* Profile Icon and Menu */}
         <div className="profile-menu-container">
           <img
             src={profile_icon}
@@ -378,11 +373,10 @@ const Navbar = ({ setSidebar }) => {
             <div className="profile-menu">
               {isLoggedIn ? (
                 <>
-                  {/* View Profile Button */}
                   <Link to="/profile"><button>View Profile</button></Link>
 
                   <button onClick={handleSignOut}>Sign Out</button>
-                  <Link to="/switch-account"><button>Switch Account</button></Link>
+                  {/* <Link to="/switch-account"><button>Switch Account</button></Link> */}
                   <Link to="/settings"><button>Settings</button></Link>
                   <Link to="/help"><button>Help</button></Link>
                 </>

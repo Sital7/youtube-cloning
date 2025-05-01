@@ -166,7 +166,6 @@
 
 
 
-/* Navbar Container */
 .navbar {
     display: flex;
     align-items: center;
@@ -180,7 +179,6 @@
     z-index: 100;
 }
 
-/* Left Section */
 .nav-left {
     display: flex;
     align-items: center;
@@ -196,7 +194,6 @@
     width: 120px;
 }
 
-/* Middle Section - Search Bar */
 .nav-middle {
     flex: 1;
     display: flex;
@@ -227,7 +224,6 @@
     cursor: pointer;
 }
 
-/* Right Section - Icons */
 .nav-right {
     display: flex;
     align-items: center;
@@ -239,7 +235,6 @@
     cursor: pointer;
 }
 .nav-right img:hover {
-    /* background-color: #cccccc; */
     transform: scale(1.5);
 }
 

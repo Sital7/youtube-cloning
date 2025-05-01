@@ -450,7 +450,7 @@
 
 
 // correct 123
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./Feed.css";
 import { Link } from 'react-router-dom';
 import moment from "moment";
@@ -488,7 +488,6 @@ const Feed = ({ category, setCategory }) => {
 
     return (
         <div>
-            {/* Ensure ButtonList updates category */}
             <ButtonList setCategory={setCategory} /> 
 
             <div className='feed'>
@@ -509,84 +508,3 @@ const Feed = ({ category, setCategory }) => {
 };
 
 export default Feed;
-
-
-
-
-
-
-// import  { useEffect, useState } from 'react';
-// import "./Feed.css";
-// import { Link } from 'react-router-dom';
-// import moment from "moment";
-// import { API_KEY, value_conveter } from '../../data';
-// import ButtonList from '../ButtonList/ButtonList';
-
-// const Feed = ({ category, setCategory }) => {
-//     const [data, setData] = useState([]); // Holds all the fetched videos
-//     const [loading, setLoading] = useState(true);
-//     const [nextPageToken, setNextPageToken] = useState(null); // Stores the token to fetch more videos
-
-//     const fetchData = async (pageToken = '') => {
-//         try {
-//             setLoading(true);
-//             // Update the API URL to handle pagination with nextPageToken
-//             const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}${pageToken ? `&pageToken=${pageToken}` : ''}`;
-
-//             const response = await fetch(videoList_url);
-//             const result = await response.json();
-
-//             if (result.items && result.items.length > 0) {
-//                 // If there's data, append it to the existing data
-//                 setData((prevData) => [...prevData, ...result.items]);
-//                 setNextPageToken(result.nextPageToken); // Store the nextPageToken for subsequent fetches
-//             } else {
-//                 setData([]);
-//             }
-//         } catch (error) {
-//             console.error("Error fetching data:", error);
-//         } finally {
-//             setLoading(false);
-//         }
-//     };
-
-//     useEffect(() => {
-//         fetchData(); // Fetch the initial set of videos
-//     }, [category]);
-
-//     const loadMoreVideos = () => {
-//         if (nextPageToken && !loading) {
-//             fetchData(nextPageToken); // Fetch the next set of videos
-//         }
-//     };
-
-//     return (
-//         <div>
-//             {/* Ensure ButtonList updates category */}
-//             <ButtonList setCategory={setCategory} /> 
-
-//             <div className='feed'>
-//                 {loading ? <p>Loading...</p> : 
-//                     data.length === 0 ? <p>No videos found.</p> : 
-//                     data.map((item) => (
-//                         <Link key={item.id} to={`/video/${item.snippet.categoryId}/${item.id}`} className='card'>
-//                             <img src={item.snippet.thumbnails.medium.url} alt={item.snippet.title} />
-//                             <h2>{item.snippet.title}</h2>
-//                             <h3>{item.snippet.channelTitle}</h3>
-//                             <p>{value_conveter(item.statistics.viewCount)} views • {moment(item.snippet.publishedAt).fromNow()}</p>
-//                         </Link>
-//                     ))
-//                 }
-//             </div>
-
-//             {/* Display Load More button if there's a next page */}
-//             {nextPageToken && !loading && (
-//                 <div className="load-more">
-//                     <button onClick={loadMoreVideos}>Load More</button>
-//                 </div>
-//             )}
-//         </div>
-//     );
-// };
-
-// export default Feed;

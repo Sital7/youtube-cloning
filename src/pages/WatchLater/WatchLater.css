@@ -1,0 +1,50 @@
+.watch-later-container {
+    padding: 20px;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  .watch-later-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+  }
+  
+  .video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-card {
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .video-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .video-card h4 {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
+  .video-card p {
+    font-size: 14px;
+    color: #aaa;
+  }
+  

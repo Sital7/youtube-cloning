@@ -1,0 +1,31 @@
+.uploaded-files-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .uploaded-files-container h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .file-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .file-list li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .file-list a {
+    color: #1a73e8;
+    text-decoration: none;
+  }
+  
+  .file-list a:hover {
+    text-decoration: underline;
+  }
+  

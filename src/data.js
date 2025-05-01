@@ -1,9 +1,8 @@
-<<<<<<< HEAD
-=======
-export const API_KEY ='AIzaSyB3RB5QUB09BSPNIsrsRMviF_wfoZAtFzU'
+export const API_KEY =  'AIzaSyAvTvcZbEmlBHgGmAZohCAVnFM5EIv5y_s';
 // 'AIzaSyD1hVKWHsn3t4-2OhjAo8gMIdLpmvK8YLg'
 // 'AIzaSyB3RB5QUB09BSPNIsrsRMviF_wfoZAtFzU';
 // 'AIzaSyAyXrd0YtYdmEozNz09DQMp-mZ9tujTXiA' ;
+// AIzaSyAvTvcZbEmlBHgGmAZohCAVnFM5EIv5y_s
 
 
 export const value_conveter = (value)=>{
@@ -17,5 +16,3 @@ export const value_conveter = (value)=>{
         return value;
     }
 }
-
->>>>>>> shital111

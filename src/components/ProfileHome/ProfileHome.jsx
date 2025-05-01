@@ -38,6 +38,7 @@ import React from 'react';
 import Recommended1 from '../Recommended1/Recommended1';
 import Shorts from '../Shots/Shorts';
 import './ProfileHome.css';
+import Profileshorts from '../Profileshorts/Profileshorts';
 // import { SiYoutubeshorts } from "react-icons/si";
 
 
@@ -49,12 +50,14 @@ const ProfileHome = () => {
       <hr />
 
       <h2>Shorts</h2>
-      <div className="shorts-scroll-wrapper">
-        <div className="shorts-scroll-container">
+      <Profileshorts />
+      {/* <Shorts /> */}
+      {/* <div className="shorts-scroll-wrapper">
+        <div className="shorts-scroll-container"> */}
           {/* <SiYoutubeshorts size={24} /> */}
-          <Shorts />
-        </div>
-      </div>
+          {/* <Shorts /> */}
+        {/* </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,175 @@
+/* .shorts-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100vw;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: -15px; 
+  }
+  
+  .shorts-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .shorts-item {
+    flex: 0 0 auto;
+    width: 80%;  
+    max-width: 350px; 
+    height: 90vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    position: relative;
+  }
+  
+  .shorts-video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .shorts-video {
+    width: 80%;
+    height: 70%;  
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .video-title-overlay {
+    position: absolute;
+    bottom: 150px;
+    left: 38%;
+    transform: translateX(-49%);
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 5px;
+  }
+  
+  .video-details {
+    position: absolute;
+    right: 1px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .video-details span, .video-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    padding: 8px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .video-details img {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .video-details img:hover {
+    transform: scale(1.5);
+  }
+  
+  .video-share {
+    border: none;
+    cursor: pointer;
+  }
+   */
+
+
+/* Container for Shorts section */
+.profileshorts-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Scrollable shorts list */
+.profileshorts-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar */
+.profileshorts-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each Shorts item */
+.profileshorts-item {
+  flex: 0 0 auto;
+  width: 250px;  /* Reduced width */
+  height: 450px; /* Reduced height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: start;
+  background-color: black;
+  border-radius: 8px;
+}
+
+/* Video inside Shorts */
+.profileshorts-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Shorts video title */
+.profileshorts-title {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Loading and No Shorts Found Styles */
+.profileshorts-loading, .profileshorts-no-videos {
+  font-size: 16px;
+  text-align: center;
+  color: gray;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .profileshorts-list {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .profileshorts-item {
+      width: 230px;  /* Adjusted for smaller screens */
+      height: 420px;
+  }
+}

@@ -361,6 +361,9 @@
 
 // export default Profile;
 
+
+
+
 import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getFirestore, collection, query, where, getDocs } from 'firebase/firestore';
@@ -431,7 +434,7 @@ const Profile = () => {
           {/* Profile Picture Section */}
           <div className="profile-picture-container">
             <img
-              src={user.photoURL || defaultProfilePic}  // Use user's photo or default
+              src={user.photoURL || defaultProfilePic} 
               alt="Profile"
               className="profile-picture"
             />

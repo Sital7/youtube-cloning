@@ -116,13 +116,13 @@
 }
 
 .tab.active {
-    background-color: #007bff;
+    background-color: #f60717;
     color: white;
-    border-color: #007bff;
+    border-color: #dd0f1c;;
 }
 
 .tab:hover {
-    background-color: #f0f0f0;
+    background-color: #cc2121;
 }
 
 .recommended-container {
